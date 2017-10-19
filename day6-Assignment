@@ -1,0 +1,31 @@
+package selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class HiddenLinks {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.google.com");
+		java.util.List<WebElement> links = driver.findElements(By.tagName("a"));
+		System.out.println(links.size());
+		for(int i=1;i<=links.size();i++)
+		{
+			System.out.println(links.get(i).getText());
+		}
+		
+		java.util.List<WebElement> hiddenDiv = driver.findElements(By.id("hidden_div"));
+		System.out.println(hiddenDiv.size());
+		for(int j=1;j<=hiddenDiv.size();j++)
+		{
+			System.out.println(hiddenDiv.get(j).getText());
+			
+		}
+		driver.quit();
+	}
+
+}
