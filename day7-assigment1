@@ -1,0 +1,48 @@
+public class Count_upplow {
+	static String n;
+	static int l;
+
+	public static void main(String[] args) throws IOException
+	{
+		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter a string:");
+		n=br.readLine();
+		l=n.length();
+		find();
+	}
+		
+	public static void find()
+	{
+		int low=0,upp=0,digit=0,special=0;
+		for(int i=0;i<l;i++)
+		{
+			char ch=n.charAt(i);
+			if(ch>=97 && ch<=123)
+			{
+				System.out.println("Lowercase letter "+ch);
+				low++;
+			}
+			else
+			if(ch>=65 && ch<=90)
+			{
+				System.out.println("Uppercase letter "+ch);
+				upp++;
+			}
+			else
+			if(ch>=48 && ch<=57)
+			{
+				System.out.println("digit is entered "+ch);
+				digit++;
+			}
+			else 
+			{
+				System.out.println("special character entered "+ch);
+				special++;
+			}
+		}
+		System.out.println("lowercase count:"+low);
+		System.out.println("uppercase count:"+upp);
+		System.out.println("digit count:"+digit);
+		System.out.println("special count:"+special);
+	}
+}
