@@ -1,0 +1,32 @@
+public class fact {
+	
+	@SuppressWarnings("null")
+	public static void main(String[] args) throws IOException {
+		System.out.println("Enter the number");
+		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		int n=Integer.parseInt(br.readLine());
+		//int n=6;
+		br.close();
+		int fact= 1;
+		for(int i=1;i<=n;i++)
+		{
+			fact=fact*i;
+		}
+		 System.out.println("Factorial for "+n+":"+fact);
+		 System.out.println("output is:"+fact);
+	}
+}
+		/*public class fact {
+		    public static void main(String[] args) throws IOException {
+		        int n,fact=1;
+		        System.out.println("Enter the number:");
+		        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		        n = Integer.parseInt(br.readLine());
+		        br.close();
+		        for(int i=1;i<=n;i++)
+		        {
+		            fact=fact*i;
+		        }
+		        System.out.println("Factorial for "+n+":"+fact);
+		    }
+		}*/
